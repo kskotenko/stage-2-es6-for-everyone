@@ -15,7 +15,10 @@ class App {
 
       const fighters = await fighterService.getFighters();
       const fightersElement = createFighters(fighters);
+      const fighterDetails = await fighterService.getFighterDetails(1);
 
+      console.log(fighterDetails);
+      
       App.rootElement.appendChild(fightersElement);
     } catch (error) {
       console.warn(error);
